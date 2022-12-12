@@ -18,6 +18,6 @@ if (navigator.serviceWorker) {
 /**
  * This function displays an alert.
  */
-function myButtonClicked() {
+function myImageClicked() {
   document.getElementById("hello-world").innerHTML = "<p>Hello, World!</p>"
 }
