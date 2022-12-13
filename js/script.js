@@ -18,6 +18,22 @@ if (navigator.serviceWorker) {
 /**
  * This function displays an alert.
  */
+function onLoadCookieCount() {
+  if (localStorage.previousCookieCount) {
+    document.getElementById("cookie-counter").innerHTML =
+      "Your cookie count is " + localStorage.previousCookieCount + "."
+  } else {
+    localStorage.previousCookieCount = 0
+  }
+}
+
+/**
+ * This function adds to a cookie counter with every click
+ */
+var counter = 0
+
 function myImageClicked() {
-  document.getElementById("hello-world").innerHTML = "<p>Hello, World!</p>"
+  localStorage.previousCookieCount++
+  document.getElementById("cookie-counter").innerHTML =
+    "<p> Your cookie count is " + localStorage.previousCookieCount + ". </p>"
 }
