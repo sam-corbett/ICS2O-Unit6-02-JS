@@ -21,7 +21,7 @@ if (navigator.serviceWorker) {
 function onLoadCookieCount() {
   if (localStorage.previousCookieCount) {
     document.getElementById("cookie-counter").innerHTML =
-      "<p> Cookie Counter: " + localStorage.previousCookieCount + ". </p>"
+      "<p> Cookie Counter: " + localStorage.previousCookieCount + "</p>"
   } else {
     localStorage.previousCookieCount = 0
   }
@@ -35,5 +35,5 @@ var counter = 0
 function myImageClicked() {
   localStorage.previousCookieCount++
   document.getElementById("cookie-counter").innerHTML =
-    "<p> Cookie Counter: " + localStorage.previousCookieCount + ". </p>"
+    "<p> Cookie Counter: " + localStorage.previousCookieCount + "</p>"
 }
